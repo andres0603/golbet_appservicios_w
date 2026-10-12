@@ -17,11 +17,14 @@ public class MappingProfile : Profile
     public MappingProfile()
 
     {
+<<<<<<< HEAD
         CreateMap<Team, TeamDto>();
 
         CreateMap<TeamFormDto, Team>().ReverseMap();
 
         CreateMap<MatchFormDto, Match>().ReverseMap();
+=======
+>>>>>>> 53a65f7dd7c72ed2cb967c3babcb4e01c8c93833
 
         // Flattening by convention: 
 

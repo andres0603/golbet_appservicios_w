@@ -1,6 +1,10 @@
 ﻿@using Golbet.Entities.Enums
 
+<<<<<<< HEAD
 @using Golbet.web.Helpers
+=======
+@using GolBet.Web.Helpers 
+>>>>>>> 53a65f7dd7c72ed2cb967c3babcb4e01c8c93833
 
 @model GolBet.Services.DTOs.MatchDetailDto 
 
@@ -162,12 +166,16 @@
 
   
 
+<<<<<<< HEAD
     <!-- Matches/Detail.cshtml, en el card-footer reemplazo el card footer por este bloque de code --> 
 
+=======
+>>>>>>> 53a65f7dd7c72ed2cb967c3babcb4e01c8c93833
     <div class="card-footer d-flex justify-content-between align-items-center"> 
 
         <small class="text-muted">🎟️ @Model.TotalBets apuestas realizadas</small> 
 
+<<<<<<< HEAD
         <div> 
 
             <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-primary">Editar</a> 
@@ -189,5 +197,22 @@
         </div> 
 
     </div>
+=======
+        @if (Model.Status == MatchStatus.Scheduled) 
+
+        { 
+
+            <button class="btn btn-success" disabled 
+
+                    title="Disponible cuando implementemos las apuestas"> 
+
+                Apostar (Pendiente por codear) 
+
+            </button> 
+
+        } 
+
+    </div> 
+>>>>>>> 53a65f7dd7c72ed2cb967c3babcb4e01c8c93833
 
 </div> 

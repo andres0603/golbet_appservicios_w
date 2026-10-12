@@ -5,6 +5,7 @@ using GolBet.Repositories.Interfaces;
 using GolBet.Services.Implementations;
 using GolBet.Services.Interfaces;
 using GolBet.Services.Mapping;
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
@@ -23,6 +24,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // ... 
 
+=======
+using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
+
+>>>>>>> 53a65f7dd7c72ed2cb967c3babcb4e01c8c93833
 builder.Services.AddControllersWithViews();
 
 //Este es el nuevo código  
@@ -54,7 +61,10 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 // Business services 
 
 builder.Services.AddScoped<IMatchService, MatchService>();
+<<<<<<< HEAD
 builder.Services.AddScoped<ITeamService, TeamService>();
+=======
+>>>>>>> 53a65f7dd7c72ed2cb967c3babcb4e01c8c93833
 var app = builder.Build();
 // Seed the database on startup 
 
@@ -68,7 +78,10 @@ using (var scope = app.Services.CreateScope())
 
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 53a65f7dd7c72ed2cb967c3babcb4e01c8c93833
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
