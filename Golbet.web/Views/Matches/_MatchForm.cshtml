@@ -100,13 +100,3 @@
 
 </form> 
 
-            @section Scripts {
-    <script>
-        // Sobrescribir la validación de números de jQuery para que acepte comas como decimales
-        if (typeof $.validator !== 'undefined') {
-            $.validator.methods.number = function (value, element) {
-                return this.optional(element) || !isNaN(Number(value.replace(',', '.')));
-            }
-        }
-    </script>
-}

@@ -1,19 +1,14 @@
 ﻿// GolBet.Web/Controllers/MatchesController.cs  (versión completa) 
 
 using Golbet.Entities.Enums;
-<<<<<<< HEAD
 using GolBet.Services.DTOs;
 using GolBet.Services.Interfaces;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-=======
+using Microsoft.AspNetCore.Authorization;
 
-using GolBet.Services.Interfaces;
-
-using Microsoft.AspNetCore.Mvc;
->>>>>>> 53a65f7dd7c72ed2cb967c3babcb4e01c8c93833
-
+using GolBet.Repositories.Data;
 
 
 namespace GolBet.Web.Controllers;
@@ -26,7 +21,6 @@ public class MatchesController : Controller
 
     private readonly IMatchService _matchService;
 
-<<<<<<< HEAD
     private readonly ITeamService _teamService;
 
 
@@ -37,13 +31,6 @@ public class MatchesController : Controller
         _matchService = matchService;
         _teamService = teamService;
     }
-=======
-
-
-    public MatchesController(IMatchService matchService)
-
-        => _matchService = matchService;
->>>>>>> 53a65f7dd7c72ed2cb967c3babcb4e01c8c93833
 
 
 
@@ -81,8 +68,8 @@ public class MatchesController : Controller
 
     }
 
-<<<<<<< HEAD
     // GET /Matches/Create 
+    [Authorize(Roles = DbSeeder.AdminRole)]
 
     public async Task<IActionResult> Create()
 
@@ -93,7 +80,6 @@ public class MatchesController : Controller
         return View(new MatchFormDto());
 
     }
-
 
 
     [HttpPost, ValidateAntiForgeryToken]
@@ -238,6 +224,4 @@ public class MatchesController : Controller
 
     }
 
-=======
->>>>>>> 53a65f7dd7c72ed2cb967c3babcb4e01c8c93833
 }

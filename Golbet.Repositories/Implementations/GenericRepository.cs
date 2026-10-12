@@ -1,8 +1,7 @@
 ﻿// GolBet.Repositories/Implementations/GenericRepository.cs 
 
 using Golbet.Entities.Common;
-using Golbet.Repositories.Data;
-
+using GolBet.Repositories.Data;
 using GolBet.Repositories.Interfaces;
 
 using Microsoft.EntityFrameworkCore;

@@ -1,5 +1,6 @@
 ﻿using Golbet.Entities.Common;
 using Golbet.Entities.Enums;
+using GolBet.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -46,6 +47,10 @@ namespace Golbet.Entities
 
 
         // Module 7 will add:  public string UserId  +  AppUser User 
+
+        public string UserId { get; set; } = null!;   // FK -> AspNetUsers (string PK) 
+
+        public AppUser User { get; set; } = null!;    // navigation property 
 
     }
 }

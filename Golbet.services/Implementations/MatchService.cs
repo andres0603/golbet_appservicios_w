@@ -1,10 +1,7 @@
 ﻿// GolBet.Services/Implementations/MatchService.cs 
 
 using AutoMapper;
-<<<<<<< HEAD
 using Golbet.Entities;
-=======
->>>>>>> 53a65f7dd7c72ed2cb967c3babcb4e01c8c93833
 using Golbet.Entities.Enums;
 
 using GolBet.Repositories.Interfaces;
@@ -61,7 +58,6 @@ public class MatchService : IMatchService
 
     }
 
-<<<<<<< HEAD
     public async Task<MatchFormDto?> GetForEditAsync(int id)
 
     {
@@ -152,6 +148,4 @@ public class MatchService : IMatchService
 
     }
 
-=======
->>>>>>> 53a65f7dd7c72ed2cb967c3babcb4e01c8c93833
 }

@@ -1,11 +1,9 @@
 ﻿@* GolBet.Web/Views/Matches/Index.cshtml *@ 
 
 @using Golbet.Entities.Enums
-<<<<<<< HEAD
+
 @using Golbet.web.Helpers 
-=======
-@using GolBet.Web.Helpers 
->>>>>>> 53a65f7dd7c72ed2cb967c3babcb4e01c8c93833
+
 
 @model IEnumerable<GolBet.Services.DTOs.MatchDto> 
 
@@ -57,7 +55,6 @@
 
 </div>  
 
-<<<<<<< HEAD
 <!-- Matches/Index.cshtml: envolver el h2 en un d-flex (como en Teams) y agregar 
 (En otras palabras, es reemplazar el h2 por el siguiente bloque de cod--> 
 
@@ -65,7 +62,13 @@
 
     <h2>⚽ Cartelera de partidos</h2> 
 
+    @if (User.IsInRole("Admin")) 
+
+{ 
+
     <a asp-action="Create" class="btn btn-success">+ Nuevo partido</a> 
+
+} 
 
 </div> 
 =======
