@@ -19,6 +19,41 @@
 
 } 
 
+@{
+    var teamName = ViewBag.TeamName as string ?? "";
+}
+
+<form asp-action="Index" method="get" class="mb-4">
+    @if (current.HasValue)
+    {
+        <input type="hidden" name="status" value="@current" />
+    }
+
+    <div class="input-group">
+        <span class="input-group-text bg-white">🔎</span>
+
+        <input type="text"
+               name="teamName"
+               value="@teamName"
+               class="form-control"
+               placeholder="Buscar por nombre de equipo..."
+               aria-label="Nombre del equipo" />
+
+        <button type="submit" class="btn btn-success">
+            Buscar
+        </button>
+
+        @if (!string.IsNullOrWhiteSpace(teamName))
+        {
+            <a asp-action="Index"
+               asp-route-status="@current"
+               class="btn btn-outline-secondary">
+                Limpiar
+            </a>
+        }
+    </div>
+</form>
+
 <div class="d-flex gap-2 flex-wrap mb-4"> 
 
     <a asp-action="Index" 
@@ -71,10 +106,6 @@
 } 
 
 </div> 
-=======
-<h2 class="mb-4">⚽ Cartelera de partidos</h2> 
->>>>>>> 53a65f7dd7c72ed2cb967c3babcb4e01c8c93833
-
   
 
 <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4"> 

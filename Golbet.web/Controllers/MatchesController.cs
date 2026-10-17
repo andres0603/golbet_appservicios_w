@@ -38,13 +38,28 @@ public class MatchesController : Controller
 
     // GET /Matches?status=Scheduled -> filtered board 
 
-    public async Task<IActionResult> Index(MatchStatus? status)
-
+    public async Task<IActionResult> Index(MatchStatus? status,string? teamName)
+        
     {
 
         ViewBag.CurrentStatus = status;
+        ViewBag.TeamName = teamName;
 
         var board = await _matchService.GetBoardAsync(status);
+
+        if (!string.IsNullOrWhiteSpace(teamName))
+        {
+            board = board
+                .Where(m =>
+                    (m.HomeTeamName ?? "").Contains(
+                        teamName.Trim(),
+                        StringComparison.OrdinalIgnoreCase)
+                    ||
+                    (m.AwayTeamName ?? "").Contains(
+                        teamName.Trim(),
+                        StringComparison.OrdinalIgnoreCase))
+                .ToList();
+        }
 
         return View(board);
 
