@@ -37,6 +37,11 @@ public class MappingProfile : Profile
 
                        options => options.MapFrom(match => match.Bets.Count));
 
+        CreateMap<Bet, BetDto>()
+
+    .ForMember(dto => dto.PotentialPayout,
+
+               options => options.MapFrom(bet => bet.Amount * bet.OddsAtPlacement));
     }
 
 }

@@ -58,6 +58,18 @@
 
 } 
 
+@if (User.IsInRole("Apostador")) 
+
+{ 
+
+    <li class="nav-item"> 
+
+        <a class="nav-link" asp-controller="Bets" asp-action="MyBets">Mis apuestas</a> 
+
+    </li> 
+
+}
+
 
                     </ul>
 

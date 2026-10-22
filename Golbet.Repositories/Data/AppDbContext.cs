@@ -1,6 +1,5 @@
 ﻿using Golbet.Entities;
 using Golbet.Entities.Common;
-using GolBet.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 using Microsoft.EntityFrameworkCore;

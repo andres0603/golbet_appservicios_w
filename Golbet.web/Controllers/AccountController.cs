@@ -1,4 +1,4 @@
-﻿using GolBet.Entities;
+﻿using Golbet.Entities;
 
 using GolBet.Repositories.Data;
 

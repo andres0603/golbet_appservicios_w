@@ -1,10 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Golbet.Entities;
 using Microsoft.AspNetCore.Identity;
 
 
 
-namespace GolBet.Entities;
+namespace Golbet.Entities;
 
 
 
